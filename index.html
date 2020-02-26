@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Documento inicial</title>
+    <!-- 2 libreria enlazada --> 
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <!-- EN ESTE DOC TENEMOS BIEN PLANTADO COMO TRABAJAR INICIALMENTE EL JS -->
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img{
+            width: 100%;
+        }
+        ul li{
+            list-style-type: none;
+            width: 400px;
+            height: auto;
+            background: black;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        ul li img{
+            object-fit: cover;
+            height: 400px;
+            object-position: center;
+        }
+        ul li a{
+            border: 2px solid black;
+            text-decoration: none;
+            height: 60px;
+            width: 100%;
+            padding: 10px;
+            background: cyan;
+            font-size: 2em;
+            color: black;
+        }
+    </style>
+    <!-- 3 Escribiremos en js -->
+     <!--<script src="js/interaction.js"></script> -->
+     <script type="text/javascript"> 
+        $(document).ready(function(){
+            $("img").hide();
+            $("li:first-child a").click(function(){
+                $("li:first-child img").fadeIn();
+            });
+            $("li:first-child a").dblclick(function(){
+                $("li:first-child img").fadeOut();
+            });
+            $("li:nth-child(2) a").click(function(){
+                $("li:nth-child(2) img").fadeIn();
+            });
+            $("li:nth-child(2) a").dblclick(function(){
+                $("li:nth-child(2) img").fadeOut();
+            });
+            $("li:nth-child(3) a").click(function(){
+                $("li:nth-child(3) img").fadeIn();
+            });
+            $("li:nth-child(3) a").dblclick(function(){
+                $("li:nth-child(3) img").fadeOut();
+            });
+            $("li:nth-child(4) a").click(function(){
+                $("li:nth-child(4) img").fadeIn();
+            });
+            $("li:nth-child(4) a").dblclick(function(){
+                $("li:nth-child(4) img").fadeOut();
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- 1 ponemos contenido -->
+    <ul>
+        <li><a href="#">Primero</a>
+        <img src="img/gif1.gif" alt="">
+        </li>
+        <li><a href="#">Segundo</a>
+        <img src="img/gif2.gif" alt="">
+        </li>
+        <li><a href="#">Tercero</a>
+        <img src="img/gif3.gif" alt="">
+        </li>
+        <li><a href="#">Cuarto</a>
+        <img src="img/gif4.gif" alt="">
+        </li>
+    </ul>
+</body>
+</html>
